@@ -1,0 +1,26 @@
+.toolbar {
+  &__spacer {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    color: #f5f5f5;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    color: #f5f5f5;
+
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: lighten(#c2185b, 30%);
+    }
+  }
+}

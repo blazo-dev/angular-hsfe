@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PeopleTableComponent, ToolbarComponent } from '@shared/components';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+const standAloneComponents = [ToolbarComponent, PeopleTableComponent];
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ...standAloneComponents,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
